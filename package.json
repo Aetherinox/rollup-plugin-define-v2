@@ -1,8 +1,24 @@
 {
-  "name": "rollup-plugin-define-v2",
-  "version": "2.0.0",
-  "private": true,
+  "name": "@aetherinox/rollup-plugin-define-v2",
   "description": "Allows you to define process.env variables which can be utilized at runtime. Replace AST nodes while bundling.",
+  "version": "2.0.0",
+  "homepage": "https://github.com/Aetherinox/rollup-plugin-define-v2#readme",
+  "author": "Aetherinox",
+  "contributors": [
+    "Aetherinox (https://github.com/Aetherinox)"
+  ],
+  "publishConfig": {
+    "aetherinox:registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aetherinox/rollup-plugin-define-v2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Aetherinox/rollup-plugin-define-v2/issues"
+  },
+  "license": "MIT",
+  "private": true,
   "keywords": [
     "rollup",
     "plugin",
@@ -14,12 +30,15 @@
     "npm",
     "modules"
   ],
-  "homepage": "https://github.com/Aetherinox/rollup-plugin-define-v2#readme",
-  "repository": "github:Aetherinox/rollup-plugin-define-v2",
-  "license": "MIT",
-  "author": "Aetherinox",
   "source": "src/define.ts",
+  "engines": {
+    "node": ">=16.0"
+  },
   "browser": false,
+  "eslintConfig": {
+    "extends": "@carv/eslint-config",
+    "root": true
+  },
   "scripts": {
     "build": "nps build",
     "format": "nps format",
@@ -28,10 +47,6 @@
     "test": "nps test",
     "preversion": "nps test",
     "postversion": "nps release"
-  },
-  "eslintConfig": {
-    "extends": "@carv/eslint-config",
-    "root": true
   },
   "dependencies": {
     "@rollup/pluginutils": "^4.0.0",
@@ -57,9 +72,6 @@
   },
   "peerDependencies": {
     "rollup": "^1.20.0 || ^2.0.0 || ^3.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "snowpack": {
     "extends": "@carv/snowpack-scripts"
